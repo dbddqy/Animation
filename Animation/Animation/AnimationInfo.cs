@@ -26,7 +26,7 @@ namespace Animation
             get
             {
                 //Return a short string describing the purpose of this GHA library.
-                return "";
+                return " Plugin for making Animation in Grasshopper";
             }
         }
         public override Guid Id

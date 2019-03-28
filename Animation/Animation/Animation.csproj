@@ -56,9 +56,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnimationComponent.cs" />
+    <Compile Include="Component\AnimationComponent.cs" />
+    <Compile Include="Component\RenderAnimationComponent.cs" />
     <Compile Include="AnimationInfo.cs" />
+    <Compile Include="GH_Type\AttributeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GH_Param\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -69,7 +74,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>Copy "$(TargetPath)" "$(TargetDir)$(ProjectName).gha"
+    <PostBuildEvent>Copy "$(TargetPath)" "C:\Users\77777777\AppData\Roaming\Grasshopper\Libraries\Animation.gha"
 Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>

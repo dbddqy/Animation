@@ -11,19 +11,12 @@ using Rhino.Geometry;
 
 namespace Animation
 {
-    public class AnimationComponent : GH_Component
+    public class RenderAnimationComponent : GH_Component
     {
-        /// <summary>
-        /// Each implementation of GH_Component must provide a public 
-        /// constructor without any arguments.
-        /// Category represents the Tab in which the component will appear, 
-        /// Subcategory the panel. If you use non-existing tab or panel names, 
-        /// new tabs/panels will automatically be created.
-        /// </summary>
-        public AnimationComponent()
-          : base("Animation", "Nickname",
-              "Description",
-              "Category", "Subcategory")
+        public RenderAnimationComponent()
+          : base("Render Animation", "RA",
+              "Make animation using cycles render.",
+              "Animation", "Animation")
         {
         }
 
