@@ -41,22 +41,25 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="RhinoCommon">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\System\rhinocommon.dll</HintPath>
+      <HintPath>E:\Program Files\Rhino 6\System\RhinoCommon.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Grasshopper">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
+      <HintPath>E:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="GH_IO">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
+      <HintPath>E:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\AnimationCamera.cs" />
+    <Compile Include="Component\ConstructAnimationCameraComponent.cs" />
     <Compile Include="Component\AnimationComponent.cs" />
+    <Compile Include="Component\ApplyAnimatinoCameraComponent.cs" />
     <Compile Include="Component\RenderAnimationComponent.cs" />
     <Compile Include="AnimationInfo.cs" />
     <Compile Include="GH_Type\AttributeType.cs" />
@@ -74,7 +77,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>Copy "$(TargetPath)" "C:\Users\77777777\AppData\Roaming\Grasshopper\Libraries\Animation.gha"
+    <PostBuildEvent>Copy "$(TargetPath)" "C:\Users\ZHONG Ruqing\AppData\Roaming\Grasshopper\Libraries\Animation.gha"
 Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>
