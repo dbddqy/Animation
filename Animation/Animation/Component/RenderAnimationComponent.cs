@@ -16,7 +16,7 @@ namespace Animation
         public RenderAnimationComponent()
           : base("Render Animation", "RA",
               "Make animation using cycles render.",
-              "Animation", "--")
+              "Display", "Animation")
         {
         }
 

@@ -14,7 +14,7 @@ namespace Animation
         public AnimationComponent()
           : base("Animation", "A",
               "Make animation captruing rhino viewport.",
-              "Animation", "Animation")
+              "Display", "Animation")
         {
         }
 

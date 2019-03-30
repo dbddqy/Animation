@@ -14,7 +14,7 @@ namespace Animation
         public ApplyAnimatinoCameraComponent()
           : base("ApplyAnimatinoCamera", "AAC",
               "Apply animation camera in active viewport",
-              "Animation", "AnimationCamera")
+              "Display", "Animation")
         {
         }
 
@@ -23,6 +23,7 @@ namespace Animation
         /// </summary>
         protected override void RegisterInputParams(GH_Component.GH_InputParamManager pManager)
         {
+            pManager.AddBooleanParameter("On", "On", "Button of the apply function", GH_ParamAccess.item);
             pManager.AddGenericParameter("AnimationCamera", "AC", "Input camera information", GH_ParamAccess.item);
         }
 
@@ -39,10 +40,14 @@ namespace Animation
         /// <param name="DA">The DA object is used to retrieve from inputs and store in outputs.</param>
         protected override void SolveInstance(IGH_DataAccess DA)
         {
+            Boolean button = false;
             AnimationCamera animationCamera = AnimationCamera.Default;
-            DA.GetData(0, ref animationCamera);
 
-            animationCamera.SetAimationCamera();
+            DA.GetData(0, ref button);
+            DA.GetData(1, ref animationCamera);
+
+            if(button == true)
+                animationCamera.SetAimationCamera();
         }
 
         /// <summary>

@@ -14,7 +14,7 @@ namespace Animation
         public ConstructAnimationCameraComponent()
           : base("ConstructAnimationCamera", "CAC",
               "Define a camera for animation",
-              "Animation", "AnimationCamera")
+              "Display", "Animation")
         {
         }
 
@@ -33,7 +33,7 @@ namespace Animation
         /// </summary>
         protected override void RegisterOutputParams(GH_Component.GH_OutputParamManager pManager)
         {
-            pManager.AddGenericParameter("Camera", "C", "Pass the information of animation camera out", GH_ParamAccess.item);
+            pManager.AddGenericParameter("AnimationCamera", "AC", "Pass the information of animation camera out", GH_ParamAccess.item);
         }
 
         /// <summary>
