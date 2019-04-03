@@ -32,6 +32,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GH_IO, Version=6.13.19058.371, Culture=neutral, PublicKeyToken=6a29997d2e6b4f97, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\library\from Yao\GH_IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Grasshopper, Version=6.13.19058.371, Culture=neutral, PublicKeyToken=dda4f5ec2cd80803, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\library\from Yao\Grasshopper.dll</HintPath>
+    </Reference>
+    <Reference Include="RhinoCommon, Version=6.13.19058.371, Culture=neutral, PublicKeyToken=552281e97c755530, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\library\from Yao\RhinoCommon.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
@@ -39,34 +51,56 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="RhinoCommon">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Program Files\Rhino 6\System\RhinoCommon.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Grasshopper">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Program Files\Rhino 6\Plug-ins\Grasshopper\Grasshopper.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="GH_IO">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>E:\Program Files\Rhino 6\Plug-ins\Grasshopper\GH_IO.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\AnimationCamera.cs" />
-    <Compile Include="Component\ConstructAnimationCameraComponent.cs" />
-    <Compile Include="Component\AnimationComponent.cs" />
-    <Compile Include="Component\ApplyAnimatinoCameraComponent.cs" />
-    <Compile Include="Component\RenderAnimationComponent.cs" />
+    <Compile Include="Material\BakeMaterialComponent.cs" />
+    <Compile Include="Material\CustomMaterialComponent.cs" />
+    <Compile Include="Material\DefaultMaterialComponent.cs" />
+    <Compile Include="Material\MaterialFromRhinoComponent.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Util\AnimationCamera.cs" />
+    <Compile Include="Camera\CameraComponent.cs" />
+    <Compile Include="Animation\SaveFramesComponent.cs" />
+    <Compile Include="Camera\ApplyCameraComponent.cs" />
     <Compile Include="AnimationInfo.cs" />
-    <Compile Include="GH_Type\AttributeType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GH_Param\" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camera_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Material_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayButton_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ApplyCamera_24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\f2076d03435872b9f4613066ddb82a9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28adc0d3f9bf03d476c703b62d70ce1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aefc6e44068fcfc2fa87a20a5a2d42a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconPlugin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6b7a7f5ec2b83f7e2f15e0877b7d7d0.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -77,7 +111,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>Copy "$(TargetPath)" "C:\Users\ZHONG Ruqing\AppData\Roaming\Grasshopper\Libraries\Animation.gha"
+    <PostBuildEvent>Copy "$(TargetPath)" "C:\Users\77777777\AppData\Roaming\Grasshopper\Libraries\Animation.gha"
 Erase "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
   <PropertyGroup>

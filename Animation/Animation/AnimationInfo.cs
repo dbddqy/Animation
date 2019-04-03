@@ -17,15 +17,13 @@ namespace Animation
         {
             get
             {
-                //Return a 24x24 pixel bitmap to represent this GHA library.
-                return null;
+                return Properties.Resources.iconPlugin;
             }
         }
         public override string Description
         {
             get
             {
-                //Return a short string describing the purpose of this GHA library.
                 return " Plugin for making Animation in Grasshopper";
             }
         }
@@ -41,16 +39,14 @@ namespace Animation
         {
             get
             {
-                //Return a string identifying you or your company.
-                return "";
+                return "Yue\nZongzi";
             }
         }
         public override string AuthorContact
         {
             get
             {
-                //Return a string representing your preferred contact details.
-                return "";
+                return "dbddqy@gmail.com\nzhongruqing.sun.zongzi@gmail.com";
             }
         }
     }
